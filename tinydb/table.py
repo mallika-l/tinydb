@@ -206,9 +206,6 @@ class Table:
                     doc_id = document.doc_id
                     doc_ids.append(doc_id)
                     table[doc_id] = dict(document)
-                    # Same as insert(): don't reuse this ID for later
-                    # auto-assigned documents in this batch.
-                    self._next_id = None
                     continue
 
                 # Generate new document ID for this document.
